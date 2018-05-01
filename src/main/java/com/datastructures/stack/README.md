@@ -1,1 +1,1 @@
-Simple Stack Interface, to test maven and JUnit
+Simple Stack Interface, to test maven and JUnit 3
