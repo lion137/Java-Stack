@@ -1,0 +1,1 @@
+Simple Stack Interface, to test maven and JUnit
