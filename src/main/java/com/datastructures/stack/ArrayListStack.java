@@ -8,32 +8,29 @@ public class ArrayListStack<T> implements Stack<T> {
 
     private List<T> a = new ArrayList<T>();
 
-    private int N = 0;
-
     public int size(){
         return a.size();
     }
 
     public boolean isEmpty(){
-        return N == 0;
+        return a.size() == 0;
     }
 
     public T pop(){
-        return a.remove(--N);
+        return a.remove(a.size() - 1);
     }
 
 
     public void push(T elem){
-        this.a.add(elem);
-        N++;
+        a.add(elem);
     }
 
     public T peek(){
-        return a.get(N - 1);
+        return a.get(a.size() - 1);
     }
 
     @Override public String toString(){
-        return this.a.toString();
+        return a.toString();
     }
 
 }
