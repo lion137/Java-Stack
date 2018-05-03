@@ -50,5 +50,4 @@ public class Test extends TestCase {
         assertEquals("[A]", st1.toString());
     }
 
-
 }
