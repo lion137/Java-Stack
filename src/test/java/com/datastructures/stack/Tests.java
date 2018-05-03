@@ -12,8 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(value = Parameterized.class)
 public class Tests {
-    static int a;
-    static int expected;
+    private int a;
+    private int expected;
 
     public Tests(int _a, int _expected){
         this.a = _a;
