@@ -1,11 +1,38 @@
 package com.datastructures.stack;
 
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 import org.junit.Test;
+import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-public class TestsClass{
+@RunWith(value = Parameterized.class)
+public class Tests {
+    static int a;
+    static int expected;
+
+    public Tests(int _a, int _expected){
+        this.a = _a;
+        this.expected = _expected;
+    }
+
+    @Parameters(name = "{index}: testSize({0}) = {1}")
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][]{
+                {3, 1},
+                {2, 1},
+                {1, 1},
+        });
+    }
+
+    @Test
+    public void testPushSize(){
+        assertEquals(Main.sizeTest(a), expected);
+    }
 
     @Test
     public void testConstructor() {
@@ -18,8 +45,8 @@ public class TestsClass{
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testPopEmpty() {
-       Stack<Integer> empty_stack = new ArrayListStack<Integer>();
-       Object test = empty_stack.pop();
+        Stack<Integer> empty_stack = new ArrayListStack<Integer>();
+        Object test = empty_stack.pop();
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
@@ -92,7 +119,6 @@ public class TestsClass{
             assertEquals(test, true);
         }
     }
+
+
 }
-
-
-
