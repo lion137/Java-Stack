@@ -21,8 +21,9 @@ public class ArrayListStack<T> implements Stack<T> {
     }
 
 
-    public void push(T elem){
+    public boolean push(T elem){
         a.add(elem);
+        return true;
     }
 
     public T peek(){
