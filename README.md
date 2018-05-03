@@ -1,2 +1,2 @@
 # Java-Stack:    
-Simple project, to test  JUnit 3 and Maven.
+Simple project, to test  JUnit 3, 4 and Maven.
